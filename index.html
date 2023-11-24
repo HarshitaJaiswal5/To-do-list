@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style=" color: black;">Todo-list</h1>
+
+
+</body>
+<script>
+    
+
+
+
+    let myTasks = []
+
+
+
+    function addTask() {
+        const newTask = prompt("Enter a new task")
+        myTasks.push(newTask)
+    }
+
+    function displayTask() {
+        const ul = document.createElement('ul')
+        myTasks.forEach((e) => {
+            console.log(e)
+        })
+    }
+
+    function replaceTask() {
+        const prevTask = prompt("Enter prevTask")
+        if (myTasks.includes(prevTask)) {
+            const ind = myTasks.indexOf(prevTask)
+            const newTask = prompt("Enter the task u want to replace")
+            myTasks.splice(ind, 1, newTask)
+        }
+    }
+
+
+    function deleteTask() {
+        const delT = prompt("Enter the task you want to delete")
+        myTasks.splice(myTasks.indexOf(delT), 1)
+    }
+
+    console.log("Enter your Choice")
+    console.log("addTasks()");   
+    console.log("displayTask()")
+    console.log("replaceTask()");
+    console.log("deleteTask()");
+    
+   
+
+
+
+</script>
+
+</html>
